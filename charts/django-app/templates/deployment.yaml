@@ -23,5 +23,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "django-app.fullname" . }}-config
+            - secretRef:
+                name: {{ .Values.existingSecret }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
