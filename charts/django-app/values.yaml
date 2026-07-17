@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: 211125442148.dkr.ecr.us-west-2.amazonaws.com/django-app
   tag: 'latest'
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 # Terraform creates this Secret in the django-app namespace. It contains
 # SECRET_KEY, DB_HOST (RDS endpoint), DB_PORT, DB_NAME, DB_USER and DB_PASSWORD.
