@@ -8,14 +8,14 @@ Jenkins updates these values after pushing an image to Amazon ECR:
 
 ```yaml
 image:
-  repository: <account>.dkr.ecr.eu-central-1.amazonaws.com/django-app
+  repository: <account>.dkr.ecr.us-west-2.amazonaws.com/django-app
   tag: <jenkins-build>-<git-commit>
 ```
 
 The Deployment renders them as:
 
 ```yaml
-image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
 ```
 
 ## RDS connection
