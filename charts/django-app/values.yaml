@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: 123456789012.dkr.ecr.eu-central-1.amazonaws.com/django-app
-  tag: "latest"
+  repository: 211125442148.dkr.ecr.us-west-2.amazonaws.com/django-app
+  tag: 'latest'
   pullPolicy: IfNotPresent
 
 # Terraform creates this Secret in the django-app namespace. It contains
@@ -16,7 +16,7 @@ service:
 
 env:
   DJANGO_SETTINGS_MODULE: config.settings
-  DEBUG: "False"
+  DEBUG: 'False'
 
 resources:
   requests:
